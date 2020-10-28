@@ -1,6 +1,25 @@
 <div class="section">
 	<mat-card class="primary">
-		<mat-card-title>cv df</mat-card-title>
-		fdg
+		<mat-card-title class="primary"></mat-card-title>
+		<p>
+			<mat-form-field appearance="fill">
+				<mat-label>Enter your name</mat-label>
+				<input matInput [formControl]="formsControl">
+				<mat-error *ngIf="formsControl.hasError('required')">
+					Please enter your name</mat-error>
+			</mat-form-field>
+		</p>
+		<p>
+			<mat-form-field appearance="fill">
+				<mat-label>Enter your password</mat-label>
+				<input matInput [formControl]="formsControl" [type]="hide ? 'password' : 'text'">
+				<button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+				<mat-error *ngIf="formsControl.hasError('required')">
+					Please enter your password</mat-error>
+			</mat-form-field>
+		</p>
+		<button mat-raised-button color="primary">Log In</button>
 	</mat-card>
 </div>

@@ -7,6 +7,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   imports: [CommonModule],
@@ -17,7 +18,8 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule {}
